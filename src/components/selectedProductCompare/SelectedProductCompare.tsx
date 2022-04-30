@@ -37,12 +37,13 @@ return (
                 <Form>
                     <DropdownFormField 
                         name='primaryIntegration'
+                        label='Select a product to find available product integrations'
                         options={PRODUCTS.map((product: ChangeMe) => ({value: product.value, label:product.label}))}
                         onChange={handleSelectProduct(formikProps.setFieldValue)} 
                     />
                     {availableIntegrations &&
                         <>
-                            <TextFormField onChange={handleFilter(formikProps.setFieldValue)} name='integrationFilter' label='' />
+                            <TextFormField label='Search for a specific product' onChange={handleFilter(formikProps.setFieldValue)} name='integrationFilter' />
                             <IntegrationListContainer>
                             {availableIntegrations.map((item: ChangeMe, index: number) => (
                                 <IntegrationListItem key={'integrationListItem' + id + index} name={item.label} value={item.value} />
