@@ -16,9 +16,8 @@ code {
     width: 100vw;
     height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 @import './components/integrationListContainer/IntegrationListContainer.scss';
 @import './components/integrationListItem/IntegrationListItem.scss';
+@import './components/navBar/NavBar.scss';

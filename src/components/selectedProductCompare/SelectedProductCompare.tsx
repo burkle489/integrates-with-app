@@ -25,7 +25,6 @@ const handleSelectProduct = (setFieldValue: ChangeMe) => (e:ChangeMe) => {
 
 const handleFilter = (setFieldValue:ChangeMe) => (e:ChangeMe) => {
     const value = e.target.value;
-    console.log({value})
     setFieldValue('integrationFilter',value)
     setTextFilter(value)
 }
