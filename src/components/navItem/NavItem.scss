@@ -1,9 +1,14 @@
 .NavItem {
-    padding: 0 10px;
+    margin: 0 10px;
+    padding-bottom: 5px;
     a {
         text-decoration: none;
         &:visited {
             color: black;
         }
+    }
+    &.Active {
+        border-bottom: 3px solid $color-10;
+        padding-top: 3px;
     }
 }

@@ -44,7 +44,7 @@ export const SelectedProductCompare: React.FC<SelectedProductCompareProps> = () 
                             />
                             {availableIntegrations &&
                                 <>
-                                    <TextFormField label='Search for a specific product' onChange={handleFilter(formikProps.setFieldValue)} name='integrationFilter' />
+                                    <TextFormField label='Filter by a specific product' onChange={handleFilter(formikProps.setFieldValue)} name='integrationFilter' />
                                     <IntegrationListContainer>
                                         {availableIntegrations.map((item: ChangeMe, index: number) => (
                                             <IntegrationListItem key={'integrationListItem' + id + index} name={item.label} value={item.value} />

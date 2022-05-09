@@ -1,0 +1,15 @@
+.FormField {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    .FormLabel {
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 5px;
+    }
+    .FormInput {
+        min-height: 38px;
+        border: 1px solid hsl(0%, 0%, 80%);
+        border-radius: 4px;
+    }
+}

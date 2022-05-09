@@ -2,7 +2,7 @@
 
 $color-60: #fffbf7; // very light orange/yellow
 $color-30: #ffffff; // white
-$color-10: #ffcd36; // orange
+$color-10: #ff9e00; // orange
 
 @mixin max-width-breakpoint($bp) {
     @media (max-width: $bp) {
@@ -50,3 +50,4 @@ code {
 @import './components/navBar/NavBar.scss';
 @import './components/contentCard/ContentCard.scss';
 @import './components/navItem/NavItem.scss';
+@import './components/formFields/FormFields.scss';
