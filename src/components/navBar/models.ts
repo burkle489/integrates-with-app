@@ -1,9 +1,10 @@
-import { ChangeMe } from '../../App';
+import { ChangeMe } from '../../App'
 
 export type NavBarProps = {
-    navItems: INavItem[];
-};
+    navItems: INavItem[]
+    secondaryNavItems?: INavItem[]
+}
 export type INavItem = {
-    route: string;
-    name: string;
+    route: string
+    name: string
 }
