@@ -2,6 +2,8 @@ import { SelectedProductCompare } from "../../components/selectedProductCompare/
 
 export const ProductCompare = () => {
     return (
-        <div className='ProductCompare'><SelectedProductCompare /></div>
+        <div className='Page ProductCompare'>
+            <SelectedProductCompare />
+        </div>
     )
 }
