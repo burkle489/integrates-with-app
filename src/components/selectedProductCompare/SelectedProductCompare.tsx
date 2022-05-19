@@ -3,6 +3,7 @@ import React, { useEffect, useId, useState } from 'react';
 import { ChangeMe } from '../../App';
 import { PRODUCTS } from '../../dummyData';
 import { ContentCard } from '../contentCard/ContentCard';
+import { Divider } from '../divider/Divider';
 import { DropdownFormField } from '../formFields/DropdownFormField';
 import { TextFormField } from '../formFields/TextFormField';
 import { IntegrationListContainer } from '../integrationListContainer/IntegrationListContainer';
@@ -17,7 +18,6 @@ export const SelectedProductCompare: React.FC<SelectedProductCompareProps> = () 
     const { availableIntegrations } = useSelectProduct(selectedProduct, textFilter);
     const id = useId();
 
-    useEffect(() => { console.log(availableIntegrations) }, [availableIntegrations])
     const handleSelectProduct = (setFieldValue: ChangeMe) => (e: ChangeMe) => {
         const value = e;
         setFieldValue('primaryIntegration', value)
@@ -44,7 +44,8 @@ export const SelectedProductCompare: React.FC<SelectedProductCompareProps> = () 
                             />
                             {availableIntegrations &&
                                 <>
-                                    <TextFormField label='Filter by a specific product' onChange={handleFilter(formikProps.setFieldValue)} name='integrationFilter' />
+                                    <Divider />
+                                    <TextFormField label='' placeholder='Filter by a specific product' onChange={handleFilter(formikProps.setFieldValue)} name='integrationFilter' />
                                     <IntegrationListContainer>
                                         {availableIntegrations.map((item: ChangeMe, index: number) => (
                                             <IntegrationListItem key={'integrationListItem' + id + index} name={item.label} value={item.value} />

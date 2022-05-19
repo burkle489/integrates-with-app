@@ -4,6 +4,8 @@ $color-60: #fffbf7; // very light orange/yellow
 $color-30: #ffffff; // white
 $color-10: #ff9e00; // orange
 
+$color-60-hover: #fff6ee;
+
 @mixin max-width-breakpoint($bp) {
     @media (max-width: $bp) {
         @content;
@@ -13,6 +15,11 @@ $color-10: #ff9e00; // orange
 body,
 html {
     font-family: 'Josefin Sans', sans-serif;
+}
+
+input {
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 0 10px;
 }
 
 body {
@@ -39,6 +46,10 @@ code {
     padding: 40px 30px;
 }
 
+.RemoveMargin {
+    margin: 0 !important;
+}
+
 //pages
 @import './pages/productCompare/ProductCompare.scss';
 @import './pages/home/Home.scss';
@@ -51,4 +62,5 @@ code {
 @import './components/navBar/NavBar.scss';
 @import './components/contentCard/ContentCard.scss';
 @import './components/navItem/NavItem.scss';
+@import './components/divider/Divider.scss';
 @import './components/formFields/FormFields.scss';
