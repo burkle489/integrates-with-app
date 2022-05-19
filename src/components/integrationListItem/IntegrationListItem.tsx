@@ -4,14 +4,15 @@ import { IoMdCheckmark, IoMdClose } from 'react-icons/io'
 import { PRODUCTS } from "../../dummyData"
 import { IntegrationListItemProps } from "./models"
 
-export const IntegrationListItem: React.FC<IntegrationListItemProps> = ({ name, iconPath, value, productUrl }) => {
+export const IntegrationListItem: React.FC<IntegrationListItemProps> = ({ name, icon, value, productUrl }) => {
     const [hasMoreDetails, setHasMoreDetails] = useState<boolean>(false);
     const PRODUCT = PRODUCTS.find(p => p.value === value);
 
     return (
         <div className='IntegrationListItem'>
+                <img className='IntegrationListItemIcon' src={PRODUCT?.icon} alt='wordpress icon' />
+                <div>
             <div className='IntegrationListItemHeader'>
-                <img src={iconPath} alt='wordpress icon' />
                 <p>{name}</p>
                 <div />
             </div>
@@ -28,7 +29,7 @@ export const IntegrationListItem: React.FC<IntegrationListItemProps> = ({ name, 
                     <a href={productUrl}>{`Visit ${name}`}</a>
                 </div>
             }
-
+            </div>
         </div>
     )
 }

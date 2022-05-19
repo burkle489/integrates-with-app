@@ -1,11 +1,12 @@
 .IntegrationListItem {
     width: 30%;
-    height: 100px;
-    padding: 15px 10px;
+    height: 125px;
+    padding: 15px 15px;
     margin: 0 1.5%;
     text-overflow: ellipsis;
     overflow: hidden;
-
+    display: flex;
+align-items: center;
     p {
         margin: 0;
     }
@@ -28,6 +29,12 @@
     .MenuBtn {
         cursor: pointer;
     }
+}
+
+.IntegrationListItemIcon {
+    padding-right: 10px;
+    max-height: 100%;
+    max-width: 80px;
 }
 
 .IntegrationListItemContent {

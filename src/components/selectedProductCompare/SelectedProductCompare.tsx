@@ -30,8 +30,10 @@ export const SelectedProductCompare: React.FC<SelectedProductCompareProps> = () 
         setTextFilter(value)
     }
 
+    useEffect(() => {console.log({availableIntegrations})},[availableIntegrations])
+
     return (
-        <ContentCard>
+        <ContentCard classNames='PageCard'>
             <div className='SelectedProductCompare'>
                 <Formik onSubmit={() => { }} initialValues={{ primaryIntegration: '', integrationFilter: '' }} >
                     {(formikProps: FormikProps<ChangeMe>) => (
