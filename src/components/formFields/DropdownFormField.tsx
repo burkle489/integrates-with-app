@@ -1,15 +1,14 @@
-import { FieldProps, useField } from 'formik'
-import Select from 'react-select'
-import { ChangeMe } from '../../App'
+import { FieldProps, useField } from 'formik';
+import Select from 'react-select';
 
-export const DropdownFormField: React.FC<ChangeMe & FieldProps> = ({
+export const DropdownFormField: React.FC<any & FieldProps> = ({
     id,
     label,
     onChange,
     ...props
   }) => {
     const [field, meta, helpers] = useField(props);
-      const handleOnChange = (selectedOption: ChangeMe) => {
+      const handleOnChange = (selectedOption: {label: string,value: string}) => {
         helpers.setValue(selectedOption)
       }
       const handleOnBlur = () => {

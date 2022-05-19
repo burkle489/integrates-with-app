@@ -1,11 +1,9 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import { SelectedProductCompare } from './components/selectedProductCompare/SelectedProductCompare';
-import { NavBar } from './components/navBar/NavBar';
-import { NAV_ITEMS, SECONDARY_NAV_ITEMS } from './constants';
 import { BrowserRouter as Router } from 'react-router-dom';
+import './App.css';
+import { NavBar } from './components/navBar/NavBar';
 import { RootRouter } from './components/rootRouter/RootRouter';
+import { NAV_ITEMS, SECONDARY_NAV_ITEMS } from './constants';
 
 export type ChangeMe = any;
 

@@ -1,6 +1,7 @@
 import { PRODUCT_ICONS } from "./constants"
+import { Product } from "./constants/models"
 
-export const PRODUCTS = [
+export const PRODUCTS:Product[] = [
     {
         name: 'Notion',
         value: 'Notion',

@@ -1,5 +1,9 @@
+import { SelectedProductCompare } from "../../components/selectedProductCompare/SelectedProductCompare"
+
 export const Home = () => {
     return (
-        <div className='Home'>HOME PAGE</div>
+        <div className='Page Home'>
+        <SelectedProductCompare />
+    </div>
     )
 }

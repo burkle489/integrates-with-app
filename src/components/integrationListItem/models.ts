@@ -1,3 +1,6 @@
-import { ChangeMe } from "../../App";
 
-export type IntegrationListItemProps = ChangeMe
+export type IntegrationListItemProps = {
+    name: string;
+    value: string;
+    productUrl: string;
+}

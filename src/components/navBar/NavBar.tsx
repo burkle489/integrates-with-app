@@ -1,8 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ChangeMe } from '../../App';
 import { NavItem } from '../navItem/NavItem';
-import { INavItem, NavBarProps, } from './models';
+import { INavItem, NavBarProps } from './models';
 
 export const NavBar: React.FC<NavBarProps> = ({ navItems, secondaryNavItems }) => {
     return (

@@ -4,7 +4,7 @@ import { IoMdCheckmark, IoMdClose } from 'react-icons/io'
 import { PRODUCTS } from "../../dummyData"
 import { IntegrationListItemProps } from "./models"
 
-export const IntegrationListItem: React.FC<IntegrationListItemProps> = ({ name, icon, value, productUrl }) => {
+export const IntegrationListItem: React.FC<IntegrationListItemProps> = ({ name, value, productUrl }) => {
     const [hasMoreDetails, setHasMoreDetails] = useState<boolean>(false);
     const PRODUCT = PRODUCTS.find(p => p.value === value);
 

@@ -1,11 +1,7 @@
-import { useField } from 'formik';
-import React from 'react'
-import { ChangeMe } from '../../App';
+import { FieldProps, useField } from 'formik';
+import React from 'react';
 
-
-type TextFormFieldProps = ChangeMe;
-
-export const TextFormField: React.FC<TextFormFieldProps> = ({ label, ...props }) => {
+export const TextFormField: React.FC<any & FieldProps> = ({ label, ...props }) => {
     const [field, meta, helpers] = useField(props);
     return (
         <div className='FormField'>

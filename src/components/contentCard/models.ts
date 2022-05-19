@@ -1,3 +1,6 @@
-import { ChangeMe } from '../../App'
+import React from 'react';
 
-export type ContentCardProps = ChangeMe
+export type ContentCardProps = {
+    classNames: string;
+    children: React.ReactNode
+}

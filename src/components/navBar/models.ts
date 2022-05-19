@@ -1,4 +1,3 @@
-import { ChangeMe } from '../../App'
 
 export type NavBarProps = {
     navItems: INavItem[]

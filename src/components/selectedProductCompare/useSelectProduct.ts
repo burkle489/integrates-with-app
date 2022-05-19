@@ -1,9 +1,10 @@
-import React, {useEffect,useState} from 'react';
-import { ChangeMe } from '../../App';
+import { useEffect, useState } from 'react';
 import { PRODUCTS } from '../../dummyData';
+import { DropdownItem } from '../formFields/models';
 
-export const useSelectProduct:ChangeMe = (selectedProduct:ChangeMe, textFilter: string) => {
-    const [availableIntegrations, setAvailableIntegrations] = useState<ChangeMe>(null);
+export const useSelectProduct = (selectedProduct:any, textFilter: string) => {
+    const [availableIntegrations, setAvailableIntegrations] = useState<DropdownItem<string>[] | null | undefined>(null);
+
     useEffect(() => {
         let availableIntegrations = null;
         if(selectedProduct) {
@@ -12,7 +13,7 @@ export const useSelectProduct:ChangeMe = (selectedProduct:ChangeMe, textFilter: 
             availableIntegrations = availableIntegrations?.filter(integration => integration.value.toLowerCase().startsWith(textFilter.toLowerCase()))
         }
         }
-        setAvailableIntegrations(availableIntegrations)
+        setAvailableIntegrations(availableIntegrations);
     },[selectedProduct,textFilter])
     return {availableIntegrations};
 }
